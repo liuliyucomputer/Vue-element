@@ -6,6 +6,7 @@ const app = express();
 const PORT = 3000;
 // 使用body-parser中间件来解析请求体
 app.use(bodyParser.json());
+// eslint-disable-next-line no-undef
 const cors = require('cors');  
 app.use(cors());
 // 模拟的用户数据
