@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-undef
-const express = require('express');  
+const express = require('express');
 // eslint-disable-next-line no-undef
 const bodyParser = require('body-parser');
 const app = express();
@@ -7,14 +7,14 @@ const PORT = 3000;
 // 使用body-parser中间件来解析请求体
 app.use(bodyParser.json());
 // eslint-disable-next-line no-undef
-const cors = require('cors');  
+const cors = require('cors');
 app.use(cors());
 // 模拟的用户数据
 const users = [
   { username: 'admin', password: '123456' }
 ];
 // 
-app.use(cors({  
+app.use(cors({
   origin: 'http://localhost:5173' // 仅允许来自 http://localhost:5173 的请求  
 }));
 // 登录API端点
